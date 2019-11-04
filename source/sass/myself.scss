@@ -1,0 +1,423 @@
+.header {
+  position: relative;
+  background: url("../img/back-block_1.png") no-repeat;
+  background-size: cover;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  margin-right: 10px;
+
+  a {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 1.25;
+    text-decoration: none;
+  }
+}
+
+.menu__button {
+  display: none;
+}
+
+//средний блок
+.middle-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.social {
+  position: absolute;
+  top: 20%;
+  right: 2%;
+
+  .social__item {
+    margin: 20px 0;
+
+    a {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+
+      span {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.5;
+        opacity: 0;
+      }
+
+      svg {
+        width: 28px;
+        height: 28px;
+        padding-right: 20px;
+
+        path {
+          fill: #ffffff;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    a:hover {
+      opacity: 1;
+
+      span {
+        opacity: 1;
+      }
+
+      svg {
+        path {
+          opacity: 1;
+        }
+      }
+    }
+
+    a:active {
+      opacity: 1;
+
+      span {
+        opacity: 1;
+      }
+
+      svg {
+        path {
+          opacity: 1;
+        }
+      }
+    }
+
+    a:focus {
+      opacity: 1;
+
+      span {
+        opacity: 1;
+      }
+
+      svg {
+        path {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+.myself {
+  width: 50%;
+  margin-top: -180px;
+
+  h2 {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    line-height: 1.083;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+
+  p {
+    line-height: 1.75;
+    text-align: center;
+    margin: 0;
+    padding: 35px 65px 50px 0;
+  }
+}
+
+.picture {
+  width: 50%;
+}
+
+.myself__button {
+  text-align: center;
+
+  .myself__button-white {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    line-height: 2.533;
+    background: #fff;
+    padding: 10px 12px;
+    text-decoration: none;
+  }
+}
+
+.myself__button-cv {
+  position: relative;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  line-height: 2.533;
+  text-decoration: none;
+}
+
+//нижний блок
+.block-last {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -41px;
+  padding-bottom: 80px;
+}
+
+.block-one {
+  width: 33.3333%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 9px 0px rgba(73, 73, 73, 0.4);
+  padding: 50px;
+
+  h3 {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+    color: rgb(88, 88, 88);
+    line-height: 1.625;
+    margin: 0;
+    padding: 25px 0 20px;
+  }
+
+  a {
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    line-height: 1.846;
+    margin: 0;
+    text-decoration: none;
+  }
+}
+
+.header__bg2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header__bg1 {
+  position: absolute;
+  right: 0;
+  left: 56%;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media(max-width: 1200px) {
+  .myself {
+    margin-top: -70px;
+
+    h2 {
+      font-size: 40px;
+      letter-spacing: 0px;
+    }
+
+    p {
+      padding: 15px 50px 25px 0;
+    }
+  }
+
+  .block-last {
+    padding-bottom: 50px;
+  }
+
+  .block-one {
+    padding: 18px;
+
+    p {
+      font-size: 16px;
+      color: rgb(88, 88, 88);
+      line-height: 1.625;
+      margin: 0;
+      padding: 20px 0 15px;
+    }
+  }
+
+  .social {
+    position: absolute;
+    bottom: 0%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+
+    .social__item {
+      margin: 20px;
+
+      a {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        flex-direction: column;
+
+        span {
+          font-size: 16px;
+          color: #ffffff;
+          line-height: 1.5;
+          opacity: 0;
+        }
+
+        svg {
+          width: 28px;
+          height: 28px;
+          padding-right: 0;
+
+          path {
+            fill: #ffffff;
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .middle-block {
+    flex-direction: column-reverse;
+  }
+
+  .myself {
+    width: 100%;
+    margin-top: 0px;
+
+    h2 {
+      font-size: 35px;
+      text-align: center;
+    }
+
+    p {
+      padding: 15px 0px 25px 0;
+    }
+  }
+
+  .picture {
+    width: 100%;
+  }
+
+  .block-last {
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .block-one {
+    width: 90%;
+  }
+
+  .social {
+    bottom: 47%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 300px;
+
+    .social__item {
+      margin: 0;
+      width: 60px;
+
+      span {
+        font-size: 12px;
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  .menu__button {
+    display: block;
+    width: 50px;
+    height: 40px;
+    background: #000;
+    border: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 2%;
+    z-index: 10;
+  }
+
+  .menu__item {
+    margin-right: 0;
+
+    a {
+      font-size: 24px;
+      line-height: 2.0;
+    }
+  }
+
+  .menu-opened {
+    animation: menu;
+    animation-duration: 1.5s;
+  }
+
+  .menu-closed {
+    animation: back;
+    animation-duration: 0.5s;
+    opacity: 0;
+  }
+
+  .button-opened {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 8px;
+      width: 35px;
+      height: 2px;
+      background-color: #fff;
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 8px;
+      width: 35px;
+      height: 2px;
+      background-color: #fff;
+      transform: rotate(45deg);
+      animation: button;
+      animation-duration: 1.5s;
+    }
+  }
+
+  .button-closed::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    box-shadow: 0 8px 0 0 #fff, 0 16px 0 0 #fff;
+  }
+}
+
