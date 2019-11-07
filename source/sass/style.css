@@ -930,5 +930,105 @@ a:hover {
     box-shadow: 0 8px 0 0 #fff, 0 16px 0 0 #fff;
   }
 }
+.about {
+  margin-top: 200px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.skill {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+}
+.skill:before {
+  content: "";
+  position: absolute;
+  top: -26%;
+  left: -100%;
+  background: #000;
+  background-position: center;
+  width: 162%;
+  height: 153%;
+  z-index: -1;
+}
+
+.skill__wrapper {
+  background-color: white;
+  box-shadow: 3px 0px 3.72px 0.28px rgba(101, 101, 101, 0.1);
+  width: 76%;
+  height: auto;
+  padding: 40px;
+}
+.skill__wrapper h2 {
+  font-size: 24px;
+  color: black;
+  line-height: 1.417;
+}
+
+.procent-item {
+  font-size: 16px;
+  color: black;
+  line-height: 1.625;
+  margin-bottom: 20px;
+}
+.procent-item p {
+  margin: 0;
+}
+.procent-item .skill__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.procent-item .value {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  margin-bottom: 0.2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0.28rem;
+}
+.procent-item .value-box {
+  text-align: center;
+  color: #fff;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9d9d9d;
+}
+
+.me {
+  width: 50%;
+}
+.me h3 {
+  font-size: 30px;
+  color: black;
+  line-height: 1.333;
+}
+.me p {
+  font-size: 16px;
+  color: #585858;
+  line-height: 1.625;
+}
+.me .me_button-black {
+  font-size: 15px;
+  color: #fff;
+  line-height: 2.533;
+  background-color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+.me .me__button-more {
+  position: relative;
+  font-size: 15px;
+  color: #000;
+  line-height: 2.533;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */
