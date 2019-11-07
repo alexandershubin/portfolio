@@ -25,6 +25,11 @@
     line-height: 1.25;
     text-decoration: none;
   }
+
+  a:hover {
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
 }
 
 .menu__button {
@@ -73,6 +78,8 @@
 
     a:hover {
       opacity: 1;
+      transform: scale(1.1);
+      transition: all 0.3s ease;
 
       span {
         opacity: 1;
@@ -143,7 +150,7 @@
 .myself__button {
   text-align: center;
 
-  .myself__button-white {
+  .button-white {
     font-size: 15px;
     color: rgb(0, 0, 0);
     line-height: 2.533;
@@ -153,7 +160,7 @@
   }
 }
 
-.myself__button-cv {
+.button-cv {
   position: relative;
   font-size: 15px;
   color: rgb(255, 255, 255);

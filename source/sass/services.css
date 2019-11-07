@@ -1,0 +1,117 @@
+.services {
+  margin-top: 90px;
+  position: relative;
+}
+.services h2 {
+  font-size: 30px;
+  color: #111111;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.services .services__discription {
+  font-size: 16px;
+  color: #262626;
+  line-height: 1.625;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 70px;
+  width: 33%;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.services__list .services__item {
+  width: 30.83%;
+  padding: 25px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 9px 0px rgba(73, 73, 73, 0.4);
+}
+.services__list a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.services__list h4 {
+  font-size: 18px;
+  color: #222222;
+  line-height: 3.4;
+  margin: 0;
+}
+.services__list p {
+  font-size: 16px;
+  color: #656565;
+  line-height: 1.563;
+  margin: 0;
+}
+
+.services__item:hover {
+  background-color: #111111;
+  transition: all 1s ease;
+  transform: scale(1.2);
+}
+.services__item:hover h4 {
+  color: #ffffff;
+}
+.services__item:hover p {
+  color: gainsboro;
+}
+
+.services__image {
+  position: absolute;
+  top: 12%;
+  right: 1%;
+}
+
+@media (max-width: 1200px) {
+  .services .services__discription {
+    width: 50%;
+  }
+
+  .services__list .services__item {
+    width: 48%;
+  }
+
+  .services__image {
+    top: 12%;
+    z-index: -1;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    margin-top: 50px;
+  }
+  .services h2 {
+    margin: 0 0 10px;
+  }
+  .services .services__discription {
+    width: 100%;
+    margin: auto auto 30px;
+  }
+
+  .services__list .services__item {
+    width: 100%;
+  }
+
+  .services__item:hover {
+    background-color: #111111;
+    transition: all 1s ease;
+    transform: scale(0.9);
+  }
+  .services__item:hover h4 {
+    color: #ffffff;
+  }
+  .services__item:hover p {
+    color: gainsboro;
+  }
+}
+
+/*# sourceMappingURL=services.css.map */

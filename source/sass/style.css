@@ -411,7 +411,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  color: #fff;
+  color: #000;
 }
 
 img {
@@ -442,8 +442,9 @@ button:hover {
   opacity: 0.5;
 }
 
-a:hover {
+.button:hover {
   opacity: 0.5;
+  transition: all 0.3s ease;
 }
 
 @keyframes menu {
@@ -583,6 +584,10 @@ a:hover {
   line-height: 1.25;
   text-decoration: none;
 }
+.menu__item a:hover {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
 
 .menu__button {
   display: none;
@@ -625,6 +630,8 @@ a:hover {
 }
 .social .social__item a:hover {
   opacity: 1;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 .social .social__item a:hover span {
   opacity: 1;
@@ -676,7 +683,7 @@ a:hover {
 .myself__button {
   text-align: center;
 }
-.myself__button .myself__button-white {
+.myself__button .button-white {
   font-size: 15px;
   color: black;
   line-height: 2.533;
@@ -685,7 +692,7 @@ a:hover {
   text-decoration: none;
 }
 
-.myself__button-cv {
+.button-cv {
   position: relative;
   font-size: 15px;
   color: white;
@@ -931,7 +938,10 @@ a:hover {
   }
 }
 .about {
-  margin-top: 200px;
+  margin-top: 70px;
+  overflow: hidden;
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 
 .about-wrapper {
@@ -939,6 +949,11 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+.about-wrapper h3 {
+  font-size: 24px;
+  color: black;
+  line-height: 1.417;
 }
 
 .skill {
@@ -949,12 +964,12 @@ a:hover {
 .skill:before {
   content: "";
   position: absolute;
-  top: -26%;
+  top: -23%;
   left: -100%;
   background: #000;
   background-position: center;
   width: 162%;
-  height: 153%;
+  height: 146%;
   z-index: -1;
 }
 
@@ -1004,18 +1019,20 @@ a:hover {
 
 .me {
   width: 50%;
+  position: relative;
 }
 .me h3 {
   font-size: 30px;
   color: black;
   line-height: 1.333;
+  margin: 0;
 }
 .me p {
   font-size: 16px;
   color: #585858;
   line-height: 1.625;
 }
-.me .me_button-black {
+.me .button-black {
   font-size: 15px;
   color: #fff;
   line-height: 2.533;
@@ -1023,12 +1040,146 @@ a:hover {
   padding: 10px 12px;
   text-decoration: none;
 }
-.me .me__button-more {
+.me .button-more {
   position: relative;
   font-size: 15px;
   color: #000;
   line-height: 2.533;
   text-decoration: none;
+}
+.me .me__image {
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  right: 0;
+  width: 67px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .me .me__image {
+    bottom: -120px;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    margin-top: 50px;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .about-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .skill {
+    width: 100%;
+    margin-top: 100px;
+  }
+  .skill:before {
+    top: -10%;
+    width: 280%;
+    height: 121%;
+  }
+
+  .me {
+    width: 100%;
+  }
+  .me .me__image {
+    bottom: -40px;
+    left: 79%;
+  }
+}
+.services {
+  margin-top: 90px;
+}
+.services h2 {
+  font-size: 30px;
+  color: #111111;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.services .services__discription {
+  font-size: 16px;
+  color: #262626;
+  line-height: 1.625;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 70px;
+  width: 33%;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.services__list .services__item {
+  width: 30.83%;
+  padding: 25px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 9px 0px rgba(73, 73, 73, 0.4);
+}
+.services__list a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.services__list h4 {
+  font-size: 18px;
+  color: #222222;
+  line-height: 3.4;
+  margin: 0;
+}
+.services__list p {
+  font-size: 16px;
+  color: #656565;
+  line-height: 1.563;
+  margin: 0;
+}
+
+.services__item:hover {
+  background-color: #111111;
+  transition: all 1s ease;
+  transform: scale(1.2);
+}
+.services__item:hover h4 {
+  color: #ffffff;
+}
+.services__item:hover p {
+  color: gainsboro;
+}
+
+@media (max-width: 1200px) {
+  .services .services__discription {
+    width: 50%;
+  }
+
+  .services__list .services__item {
+    width: 48%;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    margin-top: 50px;
+  }
+  .services h2 {
+    margin: 0 0 10px;
+  }
+  .services .services__discription {
+    width: 100%;
+    margin: auto auto 30px;
+  }
+
+  .services__list .services__item {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

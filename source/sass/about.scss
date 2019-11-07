@@ -1,5 +1,8 @@
 .about {
-  margin-top: 200px;
+  margin-top: 70px;
+  overflow: hidden;
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 
 .about-wrapper {
@@ -7,6 +10,12 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  h3 {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    line-height: 1.417;
+  }
 }
 
 .skill {
@@ -17,12 +26,12 @@
   &:before {
     content: "";
     position: absolute;
-    top: -26%;
+    top: -23%;
     left: -100%;
     background: #000;
     background-position: center;
     width: 162%;
-    height: 153%;
+    height: 146%;
     z-index: -1;
   }
 }
@@ -78,11 +87,13 @@
 
 .me {
   width: 50%;
+  position: relative;
 
   h3 {
     font-size: 30px;
     color: rgb(0, 0, 0);
     line-height: 1.333;
+    margin: 0;
   }
 
   p {
@@ -91,7 +102,7 @@
     line-height: 1.625;
   }
 
-  .me_button-black {
+  .button-black {
     font-size: 15px;
     color: #fff;
     line-height: 2.533;
@@ -100,7 +111,7 @@
     text-decoration: none;
   }
 
-  .me__button-more {
+  .button-more {
     position: relative;
     font-size: 15px;
     color: #000;
@@ -108,6 +119,53 @@
     text-decoration: none;
   }
 
+  .me__image {
+    position: absolute;
+    bottom: -160px;
+    left: 0;
+    right: 0;
+    width: 67px;
+    margin: auto;
+  }
+}
+
+@media(max-width: 1200px) {
+  .me {
+    .me__image {
+      bottom: -120px;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .about {
+    margin-top: 50px;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .about-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .skill {
+    width: 100%;
+    margin-top: 100px;
+
+    &:before {
+      top: -10%;
+      width: 280%;
+      height: 121%;
+    }
+  }
+  .me {
+    width: 100%;
+
+    .me__image {
+      bottom: -40px;
+      left: 79%;
+    }
+  }
 }
 
 
