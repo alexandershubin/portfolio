@@ -1,0 +1,17 @@
+.tabs__list {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.tabs__list button {
+  font-size: 18px;
+  color: #ffa801;
+  line-height: 1.444;
+  text-align: center;
+}
+
+.tabs__item.active {
+  color: #ffa801;
+}
+
+/*# sourceMappingURL=portfolio.css.map */

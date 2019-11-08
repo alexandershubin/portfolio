@@ -411,7 +411,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  color: #000;
+  color: #fff;
 }
 
 img {
@@ -922,8 +922,6 @@ button:hover {
     height: 2px;
     background-color: #fff;
     transform: rotate(45deg);
-    animation: button;
-    animation-duration: 1.5s;
   }
 
   .button-closed::before {
@@ -1092,6 +1090,8 @@ button:hover {
 }
 .services {
   margin-top: 90px;
+  position: relative;
+  margin-bottom: 100px;
 }
 .services h2 {
   font-size: 30px;
@@ -1156,7 +1156,16 @@ button:hover {
   color: gainsboro;
 }
 
+.services__image {
+  position: absolute;
+  top: 12%;
+  right: 1%;
+}
+
 @media (max-width: 1200px) {
+  .services {
+    margin-bottom: 50px;
+  }
   .services .services__discription {
     width: 50%;
   }
@@ -1164,10 +1173,16 @@ button:hover {
   .services__list .services__item {
     width: 48%;
   }
+
+  .services__image {
+    top: 12%;
+    z-index: -1;
+  }
 }
 @media (max-width: 768px) {
   .services {
     margin-top: 50px;
+    margin-bottom: 0;
   }
   .services h2 {
     margin: 0 0 10px;
@@ -1180,6 +1195,74 @@ button:hover {
   .services__list .services__item {
     width: 100%;
   }
+
+  .services__item:hover {
+    background-color: #111111;
+    transition: all 1s ease;
+    transform: scale(0.9);
+  }
+  .services__item:hover h4 {
+    color: #ffffff;
+  }
+  .services__item:hover p {
+    color: gainsboro;
+  }
+}
+.portfolio {
+  background: #000;
+  padding: 100px 0;
+}
+.portfolio h2 {
+  font-size: 36px;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.portfolio p {
+  font-size: 16px;
+  color: white;
+  line-height: 1.625;
+  text-align: center;
+  width: 32%;
+  margin: 0 auto 50px;
+}
+
+.tabs__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.tabs__list button {
+  font-size: 18px;
+  line-height: 1.444;
+  text-align: center;
+  border: none;
+  margin: 0 10px;
+  user-select: none;
+  background: #000000;
+}
+
+.tabs__item button.active {
+  color: #ffa801;
+}
+.tabs__item button.active:hover {
+  opacity: 1;
+}
+
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.portfolio__item {
+  margin: auto;
+  padding: 10px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

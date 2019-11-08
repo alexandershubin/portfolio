@@ -1,6 +1,7 @@
 .services {
   margin-top: 90px;
   position: relative;
+  margin-bottom: 100px;
 
   h2 {
     font-size: 30px;
@@ -81,6 +82,7 @@
 
 @media(max-width: 1200px) {
   .services {
+    margin-bottom: 50px;
     .services__discription {
       width: 50%;
     }
@@ -102,6 +104,7 @@
 @media(max-width: 768px) {
   .services {
     margin-top: 50px;
+    margin-bottom: 0;
 
     h2 {
       margin: 0 0 10px;
