@@ -9,7 +9,7 @@
     "del": "^4.0.0",
     "editorconfig": "^0.15.0",
     "gulp-lintspaces": "^1.0.0",
-    "jquery": "^1.9.1",
+    "jquery": "^3.4.0",
     "normalize-scss": "^7.0.1",
     "popper.js": "^1.16.0"
   },
