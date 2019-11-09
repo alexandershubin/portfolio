@@ -58,3 +58,12 @@
   margin: auto;
   padding: 10px 0;
 }
+
+//animation
+.tabs-live-enter-active, .tabs-live-leave-active {
+  transition: all 1.3s;
+}
+.tabs-live-enter, .tabs-live-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}

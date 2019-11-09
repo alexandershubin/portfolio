@@ -1,6 +1,7 @@
 var port = new Vue({
   el: ".portfolio",
   data: {
+    show: true,
     portEl: [
       {img:"img/img.png", filter: "Graphics"},
       {img:"img/img_2.png", filter: "Web"},
@@ -17,6 +18,7 @@ var port = new Vue({
 
       tabs.forEach(tab => {
         tab.classList.remove("active")
+        tab.classList.remove("tabs-live")
       });
       e.target.classList.add("active")
        this.filterEl = this.portEl.filter(function (item) {
@@ -33,6 +35,6 @@ var port = new Vue({
   mounted () {
     this.allItems()
   }
-})
+});
 
 //прямое вхождение строки

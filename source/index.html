@@ -533,34 +533,38 @@
     <div class="tabs">
       <ul class="tabs__list">
         <li class="tabs__item">
-          <button class="active" @click="allItems">All</button>
+          <button v-on:click="show = !show" class="active" @click="allItems">All</button>
         </li>
         
         <li class="tabs__item">
-          <button @click="sort($event)">Graphics</button>
+          <button v-on:click="show = !show" @click="sort($event)">Graphics</button>
         </li>
         
         <li class="tabs__item">
-          <button @click="sort($event)">Web</button>
+          <button v-on:click="show = !show" @click="sort($event)">Web</button>
         </li>
         
         <li class="tabs__item">
-          <button @click="sort($event)">Marteting</button>
+          <button v-on:click="show = !show" @click="sort($event)">Marteting</button>
         </li>
         
         <li class="tabs__item">
-          <button @click="sort($event)">Photoshop</button>
+          <button v-on:click="show = !show" @click="sort($event)">Photoshop</button>
         </li>
-  
+        
         <li class="tabs__item">
-          <button @click="sort($event)">Illustrator</button>
+          <button v-on:click="show = !show" @click="sort($event)">Illustrator</button>
         </li>
       </ul>
     </div>
     
     <ul class="portfolio__list">
       <li v-for="(item, i) in filterEl" class="portfolio__item">
-        <a href=""><img :src="item.img" alt=""></a>
+        <a href="">
+          <transition name="tabs-live">
+            <img v-if="show" :src="item.img" alt="img">
+          </transition>
+        </a>
       </li>
     </ul>
   </div>
