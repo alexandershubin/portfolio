@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
-var del = require("del");
+var del = require("del")
 var plumber = require("gulp-plumber");
 var rename = require("gulp-rename");
 var sass = require("gulp-sass");
@@ -17,7 +17,6 @@ var include = require("posthtml-include");
 var uglify = require("gulp-uglifyjs");
 var htmlmin = require("gulp-htmlmin");
 var server = require("browser-sync").create();
-var babel = require("gulp-babel");
 
 
 gulp.task("css", function () {
@@ -35,18 +34,13 @@ gulp.task("css", function () {
 });
 
 gulp.task("js", function() {
-  return gulp.src("source/js/*.js")
-  .pipe(babel({
-    presets: ['env']
-  }))
-
+  return gulp.src(["source/js/*.js"
+  ])
   .pipe(gulp.dest("build/js"))
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(rename("app.min.js"))
   .pipe(gulp.dest("build/js"));
 });
-
-
 
 gulp.task("html", function() {
   return gulp.src(["source/*.html"
@@ -138,5 +132,3 @@ gulp.task(
     "build",
     "server"
   ));
-
-

@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function () {
       menuList.classList.remove("menu-opened");
       menuList.classList.add("menu-closed");
       overlay.classList.remove("overlay-modal");
-      body.style.overflow = "";
+      body.style.overflow = '';
     }
-  })
+  });
 });

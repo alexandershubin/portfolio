@@ -8,9 +8,10 @@
   <meta name="description" content="Описание страницы сайта."/>
   <title>Portfolio</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
 </head>
-<body>
+<body class="body-wrapper">
 
 <header class="header">
   <h1 class="visually-hidden">I am Jack Barboza</h1>
@@ -529,47 +530,192 @@
     <h2>My Portfolio</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
     
-    
-    <div class="tabs">
-      <ul class="tabs__list">
-        <li class="tabs__item">
-          <button v-on:click="show = !show" class="active" @click="allItems">All</button>
-        </li>
-        
-        <li class="tabs__item">
-          <button v-on:click="show = !show" @click="sort($event)">Graphics</button>
-        </li>
-        
-        <li class="tabs__item">
-          <button v-on:click="show = !show" @click="sort($event)">Web</button>
-        </li>
-        
-        <li class="tabs__item">
-          <button v-on:click="show = !show" @click="sort($event)">Marteting</button>
-        </li>
-        
-        <li class="tabs__item">
-          <button v-on:click="show = !show" @click="sort($event)">Photoshop</button>
-        </li>
-        
-        <li class="tabs__item">
-          <button v-on:click="show = !show" @click="sort($event)">Illustrator</button>
-        </li>
-      </ul>
-    </div>
-    
     <ul class="portfolio__list">
-      <li v-for="(item, i) in filterEl" class="portfolio__item">
-        <a href="">
-          <transition name="tabs-live">
-            <img v-if="show" :src="item.img" alt="img">
-          </transition>
-        </a>
-      </li>
+      <li class="portfolio__item"><span>All</span></li>
+      <li class="portfolio__item"><span>Graphics</span><img src="" alt=""></li>
+      <li class="portfolio__item"><span>Web</span><img src="" alt=""></li>
+      <li class="portfolio__item"><span>Marteting</span><img src="" alt=""></li>
+      <li class="portfolio__item"><span>Photoshop</span><img src="" alt=""></li>
+      <li class="portfolio__item"><span> Illustrator</span><img src="" alt=""></li>
     </ul>
+  </div>
+</section>
+
+<section class="news">
+  <img class="news__cross" src="img/cross.png" alt="icon">
+  <h2 class="visually-hidden">I am Jack Barboza</h2>
+  <div class="container">
+    <h2>My News and Projects</h2>
+    <p class="news__description">Etiam id augue sollicitudin ex ultrices accumsan id eget urna. Duis ut vestibulum arcu. Ut congue facilisis </p>
+  
+    <div class="news-wrap">
+      <div class="news__block news__block--first">
+        <img src="img/news-1.png" alt="img">
+        <div class="news-wrapper">
+          <ul class="news__list">
+            <li class="news__item">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="17"
+                   viewBox="0 0 13 17">
+                <image id="_004-man-user" data-name="004-man-user" width="13" height="17"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAARCAYAAAAG/yacAAAA8ElEQVQokZXTsStGURjH8c9735IsLu+bLLqblFFZlMVisylZTPgnGE0U+SeUwegPkBgYsclgtDAYpOjUuXWdnOH86nb63Z7v8+ve5zm9pmkk2scmpvCGM+x1S/p1XXf9Do4wwCgmsYwP3LZFVZKym8ZGbXdNCg0yUEjs5aB+BqqyBs8Z6AU/uaSDDPTnfQpdYgPf0YfuW7joFqVzmovnJ8bxjrHY/DFNWsEVnuJzjDUcRv+Aa6y2SQu4y3zLf1oKG3GC+QJouioEgmYDNCyEJgIUtrlEwwCFrS7RaTunRawj/MkZhPsygq84q1fc4xw3vwsKJJDU6MbyAAAAAElFTkSuQmCC"/>
+              </svg>
+              <span>Oruna</span></li>
+            <li class="news__item">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="17"
+                   viewBox="0 0 18 17">
+                <image id="_005-time-left" data-name="005-time-left" width="18" height="17"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAABo0lEQVQ4jZXUTYiNcRQG8N+M72+lSLNRsvJRPhY2s6FEFCVuUSTKysqCZmdh1Iys1IRS1Owm+chmBiUrMSP52FhgSyQLhJhOnf/09nbfK0/d7r3nnPf5P+f8n/N2tVotbbADx7EV8zP9A/dxCXewDH/wMZLTaxxrcAOr8v89PMYsrMXO/DzESpzAzTrR7gzGyfsw0k4qDmA4f+8tRN0ZWJ+BOH1uhWQxnmS+INq7jWt4UIJFUUj9jM210xdhE5ZWYp9SfUEX/gbRUSzAhjZt/I6ibLcaK5iDb7gYrZ3BVzxrmEkn/MJdPA+inrzOdpiW0t815ENd+Od9GfbbhsLSUj9mNNScx2ghWt5Q9AGHsT1nMYDZtZqTkQ+iL9jVYQ7XsQR96fbvGKoQXsaKIBpMu/d0IJN1YYdT6E23Bw5iS+xa9P4TL7DuH2R1HMIrjHfnFe7JXbr6HyT7092xCVMrciuHdgRPsboDQRj3StpiGx5ViQIX0vob8RKvcQ7zcpXimsMz8Yo5hgmMlYerRIFYxpk50IU4nd9BFIpDwdn01JuppzAJTHZRHRW1uDEAAAAASUVORK5CYII="/>
+              </svg>
+              <span>09:31 AM</span></li>
+            <li class="news__item">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
+                   viewBox="0 0 17 17">
+                <image id="calendar" width="17" height="17"
+                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABp0lEQVQ4jZ3TT2jPcRgH8NfmZzFkDiSHRRw2yW27uKid3ET5HriQFkWS3UZO4qK2HRalHR2EnDYl8qd2IA7UZuPuT5goM9L0rOf765vyO/ye+vZ8nu/zfN6f53k/z9NSFIWUbXiBzfji/7IK77ALryKqhrW4gt1Yg6f43gBkdcbdxyMcD5DH2IkpbMRytDUAqaX+jP3YUUuAXjzDa3Q1ACgl4rozdjpAFtGHjwiCtuBPA4BlGRfc7Yn7taz/Yn7NyLcAacd1XMN7bM9012FDctWVHfuUZUxjPQ7jYGsSNYZJdOJWBszidpZ3By+xKf2hn+Nq3G/N9H/hGO6mPYFBrMA4OjCAe+kPfQq/wyhBejCMlrRXZtDP/PcVZyv+0Beyq3WQ4GAfnlQyOZHzMpkDdgQP0h/6UHJTB4m2LWAu7Xj5R57ncgzmK/62vLu4lFZRFHE4jaEm2nsSI2UmsS9nSuTUo8lNnIPYSxV/KZF9fQ9iMy/jYdqxCm+zhCA9yjuHm/+AxFzVQaIz5/EB/XiDrTkvMzhaGbbwlxJkL4HszYm90QQnCzjwF3r6YTuqOnwjAAAAAElFTkSuQmCC"/>
+              </svg>
+              <span>APR 16, 2018</span></li>
+          </ul>
+        
+          <h3>Quisque sed ligula quam. Fusce non massa condimentum tellus.</h3>
+          <p>Mauris eu ligula at ju risque mollis ut at orci. Cras augue nisi, malesuada quis gravida eu, ornare quis
+            neque.
+            Ut sed.</p>
+          <a class="button news__button" href="">Read More</a></div>
+      </div>
+  
+      <div class="news-flex">
+        <div class="news__block news__block--second">
+          <img src="img/news-2.png" alt="img">
+          <div class="news-wrapper">
+            <ul class="news__list">
+              <li class="news__item">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13"
+                     height="17"
+                     viewBox="0 0 13 17">
+                  <image id="_004-man-user" data-name="004-man-user" width="13" height="17"
+                         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAARCAYAAAAG/yacAAAA8ElEQVQokZXTsStGURjH8c9735IsLu+bLLqblFFZlMVisylZTPgnGE0U+SeUwegPkBgYsclgtDAYpOjUuXWdnOH86nb63Z7v8+ve5zm9pmkk2scmpvCGM+x1S/p1XXf9Do4wwCgmsYwP3LZFVZKym8ZGbXdNCg0yUEjs5aB+BqqyBs8Z6AU/uaSDDPTnfQpdYgPf0YfuW7joFqVzmovnJ8bxjrHY/DFNWsEVnuJzjDUcRv+Aa6y2SQu4y3zLf1oKG3GC+QJouioEgmYDNCyEJgIUtrlEwwCFrS7RaTunRawj/MkZhPsygq84q1fc4xw3vwsKJJDU6MbyAAAAAElFTkSuQmCC"/>
+                </svg>
+                <span>Oruna</span></li>
+              <li class="news__item">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                     height="17"
+                     viewBox="0 0 18 17">
+                  <image id="_005-time-left" data-name="005-time-left" width="18" height="17"
+                         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAABo0lEQVQ4jZXUTYiNcRQG8N+M72+lSLNRsvJRPhY2s6FEFCVuUSTKysqCZmdh1Iys1IRS1Owm+chmBiUrMSP52FhgSyQLhJhOnf/09nbfK0/d7r3nnPf5P+f8n/N2tVotbbADx7EV8zP9A/dxCXewDH/wMZLTaxxrcAOr8v89PMYsrMXO/DzESpzAzTrR7gzGyfsw0k4qDmA4f+8tRN0ZWJ+BOH1uhWQxnmS+INq7jWt4UIJFUUj9jM210xdhE5ZWYp9SfUEX/gbRUSzAhjZt/I6ibLcaK5iDb7gYrZ3BVzxrmEkn/MJdPA+inrzOdpiW0t815ENd+Od9GfbbhsLSUj9mNNScx2ghWt5Q9AGHsT1nMYDZtZqTkQ+iL9jVYQ7XsQR96fbvGKoQXsaKIBpMu/d0IJN1YYdT6E23Bw5iS+xa9P4TL7DuH2R1HMIrjHfnFe7JXbr6HyT7092xCVMrciuHdgRPsboDQRj3StpiGx5ViQIX0vob8RKvcQ7zcpXimsMz8Yo5hgmMlYerRIFYxpk50IU4nd9BFIpDwdn01JuppzAJTHZRHRW1uDEAAAAASUVORK5CYII="/>
+                </svg>
+                <span>09:31 AM</span></li>
+              <li class="news__item">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17"
+                     height="17"
+                     viewBox="0 0 17 17">
+                  <image id="calendar" width="17" height="17"
+                         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABp0lEQVQ4jZ3TT2jPcRgH8NfmZzFkDiSHRRw2yW27uKid3ET5HriQFkWS3UZO4qK2HRalHR2EnDYl8qd2IA7UZuPuT5goM9L0rOf765vyO/ye+vZ8nu/zfN6f53k/z9NSFIWUbXiBzfji/7IK77ALryKqhrW4gt1Yg6f43gBkdcbdxyMcD5DH2IkpbMRytDUAqaX+jP3YUUuAXjzDa3Q1ACgl4rozdjpAFtGHjwiCtuBPA4BlGRfc7Yn7taz/Yn7NyLcAacd1XMN7bM9012FDctWVHfuUZUxjPQ7jYGsSNYZJdOJWBszidpZ3By+xKf2hn+Nq3G/N9H/hGO6mPYFBrMA4OjCAe+kPfQq/wyhBejCMlrRXZtDP/PcVZyv+0Beyq3WQ4GAfnlQyOZHzMpkDdgQP0h/6UHJTB4m2LWAu7Xj5R57ncgzmK/62vLu4lFZRFHE4jaEm2nsSI2UmsS9nSuTUo8lNnIPYSxV/KZF9fQ9iMy/jYdqxCm+zhCA9yjuHm/+AxFzVQaIz5/EB/XiDrTkvMzhaGbbwlxJkL4HszYm90QQnCzjwF3r6YTuqOnwjAAAAAElFTkSuQmCC"/>
+                </svg>
+                <span>APR 16, 2018</span></li>
+            </ul>
+        
+            <h3>Quisque sed ligula quam. Fusce non massa condimentum tellus.</h3>
+            <p>Mauris eu ligula at ju risque mollis ut at orci. Cras augue nisi, malesuada quis gravida eu, ornare quis
+              neque.
+              Ut sed.</p>
+            <a class="button news__button" href="">Read More</a></div>
+        </div>
+    
+        <div class="news__block news__block--third">
+          <img src="img/news-3.png" alt="img">
+          <div class="news-wrapper">
+            <ul class="news__list">
+              <li class="news__item">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13"
+                     height="17"
+                     viewBox="0 0 13 17">
+                  <image id="_004-man-user" data-name="004-man-user" width="13" height="17"
+                         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAARCAYAAAAG/yacAAAA8ElEQVQokZXTsStGURjH8c9735IsLu+bLLqblFFZlMVisylZTPgnGE0U+SeUwegPkBgYsclgtDAYpOjUuXWdnOH86nb63Z7v8+ve5zm9pmkk2scmpvCGM+x1S/p1XXf9Do4wwCgmsYwP3LZFVZKym8ZGbXdNCg0yUEjs5aB+BqqyBs8Z6AU/uaSDDPTnfQpdYgPf0YfuW7joFqVzmovnJ8bxjrHY/DFNWsEVnuJzjDUcRv+Aa6y2SQu4y3zLf1oKG3GC+QJouioEgmYDNCyEJgIUtrlEwwCFrS7RaTunRawj/MkZhPsygq84q1fc4xw3vwsKJJDU6MbyAAAAAElFTkSuQmCC"/>
+                </svg>
+                <span>Oruna</span></li>
+              <li class="news__item">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                     height="17"
+                     viewBox="0 0 18 17">
+                  <image id="_005-time-left" data-name="005-time-left" width="18" height="17"
+                         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAYAAADQWvz5AAABo0lEQVQ4jZXUTYiNcRQG8N+M72+lSLNRsvJRPhY2s6FEFCVuUSTKysqCZmdh1Iys1IRS1Owm+chmBiUrMSP52FhgSyQLhJhOnf/09nbfK0/d7r3nnPf5P+f8n/N2tVotbbADx7EV8zP9A/dxCXewDH/wMZLTaxxrcAOr8v89PMYsrMXO/DzESpzAzTrR7gzGyfsw0k4qDmA4f+8tRN0ZWJ+BOH1uhWQxnmS+INq7jWt4UIJFUUj9jM210xdhE5ZWYp9SfUEX/gbRUSzAhjZt/I6ibLcaK5iDb7gYrZ3BVzxrmEkn/MJdPA+inrzOdpiW0t815ENd+Od9GfbbhsLSUj9mNNScx2ghWt5Q9AGHsT1nMYDZtZqTkQ+iL9jVYQ7XsQR96fbvGKoQXsaKIBpMu/d0IJN1YYdT6E23Bw5iS+xa9P4TL7DuH2R1HMIrjHfnFe7JXbr6HyT7092xCVMrciuHdgRPsboDQRj3StpiGx5ViQIX0vob8RKvcQ7zcpXimsMz8Yo5hgmMlYerRIFYxpk50IU4nd9BFIpDwdn01JuppzAJTHZRHRW1uDEAAAAASUVORK5CYII="/>
+                </svg>
+                <span>09:31 AM</span></li>
+              <li class="news__item">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17"
+                     height="17"
+                     viewBox="0 0 17 17">
+                  <image id="calendar" width="17" height="17"
+                         xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABp0lEQVQ4jZ3TT2jPcRgH8NfmZzFkDiSHRRw2yW27uKid3ET5HriQFkWS3UZO4qK2HRalHR2EnDYl8qd2IA7UZuPuT5goM9L0rOf765vyO/ye+vZ8nu/zfN6f53k/z9NSFIWUbXiBzfji/7IK77ALryKqhrW4gt1Yg6f43gBkdcbdxyMcD5DH2IkpbMRytDUAqaX+jP3YUUuAXjzDa3Q1ACgl4rozdjpAFtGHjwiCtuBPA4BlGRfc7Yn7taz/Yn7NyLcAacd1XMN7bM9012FDctWVHfuUZUxjPQ7jYGsSNYZJdOJWBszidpZ3By+xKf2hn+Nq3G/N9H/hGO6mPYFBrMA4OjCAe+kPfQq/wyhBejCMlrRXZtDP/PcVZyv+0Beyq3WQ4GAfnlQyOZHzMpkDdgQP0h/6UHJTB4m2LWAu7Xj5R57ncgzmK/62vLu4lFZRFHE4jaEm2nsSI2UmsS9nSuTUo8lNnIPYSxV/KZF9fQ9iMy/jYdqxCm+zhCA9yjuHm/+AxFzVQaIz5/EB/XiDrTkvMzhaGbbwlxJkL4HszYm90QQnCzjwF3r6YTuqOnwjAAAAAElFTkSuQmCC"/>
+                </svg>
+                <span>APR 16, 2018</span></li>
+            </ul>
+        
+            <h3>Quisque sed ligula quam. Fusce non massa condimentum tellus.</h3>
+            <p>Mauris eu ligula at ju risque mollis ut at orci. Cras augue nisi, malesuada quis gravida eu, ornare quis
+              neque.
+              Ut sed.</p>
+            <a class="button news__button" href="">Read More</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="news__image" src="img/Shape.png" alt="icon">
+</section>
+
+<section class="clients">
+  <h2 class="visually-hidden">I am Jack Barboza</h2>
+  <div class="container">
+    <div class="clients__wrapper">
+      <div class="clients__reviews">
+        <h3>Happy Clients talk</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt.</p>
+      </div>
+      <div class="clients__slider owl-theme">
+        <div class="owl-carousel owl-theme slider-one">
+          <div class="clients__item">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation</p>
+            <div class="clients__bottom">
+              <div class="clients__description">
+                <h4>Hira Doe</h4>
+                <span>Web Developer</span>
+              </div>
+              <img class="clients__image" src="img/image.png" alt="img" width="50px" height="50px">
+            </div>
+          </div>
+          <div class="clients__item">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation</p>
+            <div class="clients__bottom">
+              <div class="clients__description">
+                <h4>Hira Doe</h4>
+                <span>Web Developer</span>
+              </div>
+              <img class="clients__image" src="img/image.png" alt="img">
+            </div>
+          </div>
+          <div class="clients__item">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation</p>
+            <div class="clients__bottom">
+              <div class="clients__description">
+                <h4>Hira Doe</h4>
+                <span>Web Developer</span>
+              </div>
+              <img class="clients__image" src="img/image.png" alt="img">
+            </div>
+          </div>
+      </div>
+    </div>
   </div>
 </section>
 <div class="overlay"></div>
 <script src="js/app.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
