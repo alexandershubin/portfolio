@@ -13,7 +13,7 @@
 </head>
 <body class="body-wrapper">
 
-<header class="header">
+<header class="header" id="header">
   <h1 class="visually-hidden">I am Jack Barboza</h1>
   <div class="container">
     <div class="menu">
@@ -22,12 +22,12 @@
       </div>
       <div class="menu__catalog">
         <ul class="menu__list menu-closed">
-          <li class="menu__item"><a href="#">Home</a></li>
-          <li class="menu__item"><a href="#">Features</a></li>
-          <li class="menu__item"><a href="#">About</a></li>
-          <li class="menu__item"><a href="#">Services</a></li>
-          <li class="menu__item"><a href="#">Projects</a></li>
-          <li class="menu__item"><a href="#">Blog</a></li>
+          <li class="menu__item"><a href="#header">Home</a></li>
+          <li class="menu__item"><a href="#form">Features</a></li>
+          <li class="menu__item"><a href="#about">About</a></li>
+          <li class="menu__item"><a href="#services">Services</a></li>
+          <li class="menu__item"><a href="#portfolio">Projects</a></li>
+          <li class="menu__item"><a href="#project">Blog</a></li>
         </ul>
         <button class="menu__button button-closed">
           <span class="visually-hidden">Открыть меню</span>
@@ -71,7 +71,7 @@
   </div>
   <ul class="social">
     <li class="social__item">
-      <a href="#">
+      <a href="https://www.facebook.com/" target="_blank">
         <svg version="1.1" id="Capa_1"
              x="0px" y="0px"
              width="96.124px" height="96.123px" viewBox="0 0 96.124 96.123"
@@ -166,7 +166,7 @@
         <span>Twitter</span></a>
     </li>
     <li class="social__item">
-      <a href="#">
+      <a href="https://web.telegram.org/#/im?p=c1423515949_239525341488547371" target="_blank">
         <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512">
           <path
               d="m12 24c6.629 0 12-5.371 12-12s-5.371-12-12-12-12 5.371-12 12 5.371 12 12 12zm-6.509-12.26 11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953z"/>
@@ -174,7 +174,7 @@
         <span>Telegram</span></a>
     </li>
     <li class="social__item">
-      <a href="#">
+      <a href="https://github.com/alexandershubin?tab=repositories" target="_blank">
         <svg version="1.1" id="Layer_1" x="0px" y="0px"
              viewBox="0 0 291.32 291.32" style="enable-background:new 0 0 291.32 291.32;" xml:space="preserve">
 <g>
@@ -223,7 +223,7 @@
         <span>Github</span></a>
     </li>
     <li class="social__item">
-      <a href="#">
+      <a href="https://www.instagram.com/?hl=ru" target="_blank">
         <svg version="1.1" id="Layer_1" x="0px" y="0px"
              width="169.063px" height="169.063px" viewBox="0 0 169.063 169.063"
              style="enable-background:new 0 0 169.063 169.063;"
@@ -278,7 +278,7 @@
   <img src="img/Ellipse-copy_bg.svg" alt="bg" class="header__bg2">
 </header>
 
-<section class="about">
+<section class="about" id="about">
   <h2 class="visually-hidden">I am Jack Barboza</h2>
   <div class="container">
     <div class="about-wrapper">
@@ -355,7 +355,7 @@
   </div>
 </section>
 
-<section class="services">
+<section class="services" id="services">
   <h2 class="visually-hidden">I am Jack Barboza</h2>
   <div class="container">
     <h2>Services I Provide..</h2>
@@ -524,7 +524,7 @@
   <img class="services__image" src="img/Shape.png" alt="icon">
 </section>
 
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
   <h2 class="visually-hidden">I am Jack Barboza</h2>
   <div class="container">
     <h2>My Portfolio</h2>
@@ -541,7 +541,7 @@
   </div>
 </section>
 
-<section class="news">
+<section class="news" id="project">
   <img class="news__cross" src="img/cross.png" alt="icon">
   <h2 class="visually-hidden">I am Jack Barboza</h2>
   <div class="container">
@@ -741,7 +741,7 @@
   <img class="publicity__img" src="img/Ellipse.svg" alt="icon">
 </section>
 
-<section class="form">
+<section class="form" id="form">
   <h2 class="visually-hidden">I am Jack Barboza</h2>
   <div class="container">
     <div class="form__wrapper">
@@ -781,7 +781,7 @@
         <form class="form__login" action="#" method="GET">
           <div class="form__letter">
             <label class="visually-hidden" for="name">name</label>
-            <input id="name" type="text" name="name" placeholder="Your name" required>
+            <input class="form__name" id="name" type="text" name="name" placeholder="Your name" required>
             
             <label class="visually-hidden" for="email">email</label>
             <input id="email" type="email" name="email" placeholder="Your e-mail" required>
@@ -806,7 +806,7 @@
 </section>
 
 <footer class="footer">
-  <span>Copyright © 2018 . All rights Reserved.</span>
+  <span>Copyright © 2020 . All rights Reserved.</span>
 </footer>
 <div class="overlay"></div>
 <script src="js/app.min.js"></script>
