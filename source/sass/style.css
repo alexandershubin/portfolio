@@ -1517,6 +1517,7 @@ button:hover {
   background-color: #b2b2b2;
   width: 25px;
   height: 7px;
+  border-radius: 0;
 }
 
 @media (max-width: 768px) {
@@ -1550,6 +1551,177 @@ button:hover {
     padding: 20px;
   }
 }
+.publicity {
+  position: relative;
+}
+
+.publicity__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.slider-two .owl-dots {
+  display: none;
+}
+
+.owl-carousel.slider-two .owl-nav button.owl-prev,
+.owl-carousel.slider-two .owl-nav button.owl-next {
+  background: #000000;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+  width: 20px;
+  height: 51px;
+  position: absolute;
+  top: 45px;
+  border-radius: 0;
+}
+
+.owl-carousel.slider-two .owl-nav button.owl-prev {
+  left: 0;
+  background-image: url("../img/slider.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.owl-carousel.slider-two .owl-nav button.owl-next {
+  right: 0;
+  background-image: url("../img/slider.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+}
+
+.publicity__img {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  width: 50px;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .publicity {
+    margin: 10px 0;
+  }
+}
+.form {
+  background: #000000;
+  padding: 50px 0;
+}
+
+.form__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__description {
+  width: 35%;
+}
+
+.form__order {
+  width: 60%;
+  background-color: #0c0c0c;
+}
+
+.form__login {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.form__description h3 {
+  font-size: 38px;
+  color: white;
+  line-height: 2.211;
+  text-align: left;
+  margin: 0;
+}
+.form__description p {
+  font-size: 15px;
+  color: #d8d8d8;
+  line-height: 1.6;
+  margin: 20px 0 50px;
+}
+
+.form__item {
+  font-size: 15px;
+  color: white;
+  margin: 15px 0;
+  text-align: left;
+}
+.form__item p {
+  margin: 0;
+}
+.form__item a {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.form__letter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.form__letter input {
+  width: 45%;
+  background-color: #1c1c1c;
+  min-height: 48px;
+  border: 0;
+  padding: 0 10px;
+}
+
+.form__phone {
+  margin-bottom: 30px;
+}
+.form__phone input {
+  width: 100%;
+  background-color: #1c1c1c;
+  min-height: 48px;
+  border: 0;
+  padding: 0 0 0 10px;
+}
+
+.form__comment {
+  margin-bottom: 30px;
+}
+.form__comment textarea {
+  width: 100%;
+  overflow: auto;
+  background-color: #1c1c1c;
+  border: 0;
+  padding: 10px 0 0 10px;
+  resize: none;
+  min-height: 170px;
+}
+
+.form__bottom {
+  background-color: black;
+  width: 180px;
+  height: 54px;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: #0c0c0c;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer span {
+  font-size: 16px;
+  color: #b7b7b7;
+}
+
 /**
  * Owl Carousel v2.3.4
  * Copyright 2013-2018 David Deutsch

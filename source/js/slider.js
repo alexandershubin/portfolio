@@ -19,3 +19,23 @@ $('.slider-one').owlCarousel({
       }
   }
 });
+
+$('.slider-two').owlCarousel({
+  loop:true,
+  nav:true,
+  items:1,
+  margin:30,
+  stagePadding:30,
+  smartSpeed:450,
+  responsive:{
+    0:{
+      items:1
+    },
+    768:{
+      items:3
+    },
+    1200:{
+      items:4
+    }
+  }
+});
