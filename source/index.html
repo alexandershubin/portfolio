@@ -8,36 +8,43 @@
   <meta name="description" content="Описание страницы сайта."/>
   <title>Portfolio</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
 </head>
 <body class="body-wrapper">
 
-<header class="header" id="header">
-  <h1 class="visually-hidden">I am Jack Barboza</h1>
+<div class="header-top">
   <div class="container">
-    <div class="menu">
-      <div class="menu__logo">
-        <img src="img/logo.png" alt="logo">
-      </div>
-      <div class="menu__catalog">
-        <ul class="menu__list menu-closed">
-          <li class="menu__item"><a href="#header">Home</a></li>
-          <li class="menu__item"><a href="#form">Features</a></li>
-          <li class="menu__item"><a href="#about">About</a></li>
-          <li class="menu__item"><a href="#services">Services</a></li>
-          <li class="menu__item"><a href="#portfolio">Projects</a></li>
-          <li class="menu__item"><a href="#project">Blog</a></li>
-        </ul>
-        <button class="menu__button button-closed">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+    <div class="header__menu">
+      <div class="menu">
+        <div class="menu__logo">
+          <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="menu__catalog">
+          <ul class="menu__list menu-closed">
+            <li class="menu__item"><a href="#header">Home</a></li>
+            <li class="menu__item"><a href="#form">Features</a></li>
+            <li class="menu__item"><a href="#about">About</a></li>
+            <li class="menu__item"><a href="#services">Services</a></li>
+            <li class="menu__item"><a href="#portfolio">Projects</a></li>
+            <li class="menu__item"><a href="#project">Blog</a></li>
+          </ul>
+          <button class="menu__button button-closed">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
       </div>
     </div>
-    
+  </div>
+</div>
+
+<header class="header" id="header">
+  <h1 class="visually-hidden">I am Alex Shubin</h1>
+  <div class="container">
     <div class="middle-block">
       <div class="myself">
-        <h2>I am Jack Barboza</h2>
+        <h2>I am Alex Shubin</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua. Ut enim ad minim </p>
         <div class="myself__button">
@@ -117,7 +124,7 @@
         <span>Facebook</span></a>
     </li>
     <li class="social__item">
-      <a href="#">
+      <a href="https://twitter.com/home" target="_blank">
         <svg version="1.1" id="Capa_1" x="0px" y="0px"
              viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <g>
@@ -530,14 +537,17 @@
     <h2>My Portfolio</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
     
-    <ul class="portfolio__list">
-      <li class="portfolio__item"><span>All</span></li>
-      <li class="portfolio__item"><span>Graphics</span><img src="" alt=""></li>
-      <li class="portfolio__item"><span>Web</span><img src="" alt=""></li>
-      <li class="portfolio__item"><span>Marteting</span><img src="" alt=""></li>
-      <li class="portfolio__item"><span>Photoshop</span><img src="" alt=""></li>
-      <li class="portfolio__item"><span> Illustrator</span><img src="" alt=""></li>
-    </ul>
+    <div class="portfolio__buttons">
+      <button>All</button>
+      <button>Graphics</button>
+      <button>Web</button>
+      <button>Marketing</button>
+      <button>Photoshop</button>
+      <button>Illustrator</button>
+    </div>
+    <div class="portfolio__list">
+    
+    </div>
   </div>
 </section>
 
@@ -811,5 +821,6 @@
 <div class="overlay"></div>
 <script src="js/app.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/project.js"></script>
 </body>
 </html>
