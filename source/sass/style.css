@@ -1279,6 +1279,19 @@ button:hover {
   background: transparent;
   border: none;
 }
+.portfolio__buttons button:hover {
+  color: #ffa801;
+}
+.portfolio__buttons button:active {
+  color: #ffa801;
+}
+.portfolio__buttons button:focus {
+  color: #ffa801;
+}
+
+.orange {
+  color: #ffa801;
+}
 
 @media (max-width: 1200px) {
   .portfolio p {
