@@ -82,7 +82,7 @@
 
 @media(max-width: 1200px) {
   .services {
-    margin-bottom: 50px;
+
     .services__discription {
       width: 50%;
     }
@@ -103,8 +103,8 @@
 
 @media(max-width: 768px) {
   .services {
-    margin-top: 50px;
     margin-bottom: 0;
+    padding: 50px 0;
 
     h2 {
       margin: 0 0 10px;

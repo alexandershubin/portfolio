@@ -134,7 +134,7 @@
 
 @media(max-width: 1200px) {
   .news {
-    margin: 90px 0 90px;
+    padding: 90px 0;
   }
 
   .news-wrap {
@@ -160,6 +160,11 @@
 }
 
 @media(max-width: 768px) {
+  .news {
+    margin: 0;
+    padding: 50px 0;
+  }
+
   .news__description {
     width: 100%;
   }

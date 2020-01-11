@@ -17,7 +17,7 @@
     line-height: 1.625;
     text-align: center;
     width: 32%;
-    margin: 0 auto 50px;
+    margin: 0 auto 35px;
   }
 }
 
@@ -36,19 +36,30 @@
   }
 }
 
-.portfolio__list img {
-  flex-basis: auto;
-  flex-grow: 2;
+.portfolio__list li {
   padding: 10px;
-  /* max-width: 100%; */
   box-sizing: border-box;
-  max-width: 50%;
-  height: 100%;
+
+
+  img {
+    animation: button;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+.portfolio__list li:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.01);
+  cursor: pointer;
 }
 
 .portfolio__buttons {
   text-align: center;
-  margin: 20px 0;
+  margin: 0;
 
   button {
     background: transparent;
