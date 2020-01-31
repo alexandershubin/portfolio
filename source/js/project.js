@@ -155,3 +155,4 @@ const initGallery = () => {
 //
 // const h1 = node('h1', 'Hello World');
 // console.log(htmlString(h1));
+

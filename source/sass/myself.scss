@@ -21,9 +21,16 @@
   padding: 20px 0;
 }
 
+.menu__logo p {
+  font-family: "American Typewriter";
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+}
+
 .menu__list {
   display: flex;
- align-items: center;
+  align-items: center;
 }
 
 .menu__item {
@@ -70,6 +77,7 @@
       display: flex;
       text-decoration: none;
       align-items: center;
+      transition: all 300ms ease;
 
       span {
         font-size: 16px;
@@ -151,7 +159,7 @@
 
   p {
     line-height: 1.75;
-    text-align: center;
+    text-align: left;
     margin: 0;
     padding: 35px 65px 50px 0;
   }
@@ -159,27 +167,63 @@
 
 .picture {
   width: 50%;
+  margin-bottom: 250px;
 }
+
 
 .myself__button {
   text-align: center;
-
-  .button-white {
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    line-height: 2.533;
-    background: #fff;
-    padding: 10px 12px;
-    text-decoration: none;
-  }
 }
 
-.button-cv {
+// кнопка
+$primaryColor: #4A90E2;
+$secondColor:#0087AC;
+
+// button 2
+.button-white {
   position: relative;
+  border: 3px solid #ffffff;
+  border-radius: 3px;
+  transition: all 300ms ease;
+  box-shadow: 0px 4px 10px 2px rgba(white, 0.2);
   font-size: 15px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   line-height: 2.533;
+  padding: 10px 12px;
   text-decoration: none;
+  z-index: 10;
+
+
+  &:before{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #ffffff;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: -1;
+    transition: all 300ms ease;
+  }
+
+  &:hover{
+    color: #000000;
+    box-shadow:none;
+    opacity: 1;
+    &:before{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      color: #ffffff;
+    }
+  }
 }
 
 //нижний блок
@@ -189,7 +233,7 @@
   align-items: center;
   justify-content: center;
   margin-top: -41px;
-  padding-bottom: 80px;
+  padding-bottom: 35px;
 }
 
 .block-one {
@@ -321,11 +365,13 @@
 
     p {
       padding: 15px 0px 25px 0;
+      text-align: center;
     }
   }
 
   .picture {
     width: 100%;
+    margin-bottom: 80px;
   }
 
   .block-last {
@@ -339,7 +385,7 @@
   }
 
   .social {
-    bottom: 47%;
+    bottom: 60%;
     right: 0;
     left: 0;
     margin: auto;
@@ -420,11 +466,11 @@
     transform: rotate(180deg);
   }
   .line {
-    fill:none;
+    fill: none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke:#fff;
-    stroke-width:5.5;
-    stroke-linecap:round;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
   }
 
   .ham5 .top {

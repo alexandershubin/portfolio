@@ -1,8 +1,7 @@
 .about {
-  margin-top: 70px;
   overflow: hidden;
-  padding-bottom: 100px;
-  padding-top: 100px;
+  padding-bottom: 70px;
+  padding-top: 70px;
 }
 
 .about-wrapper {
@@ -108,21 +107,49 @@
   }
 
   .button-black {
+    position: relative;
+    border: 3px solid #000000;
+    border-radius: 3px;
+    transition: all 300ms ease;
+    box-shadow: 0px 4px 10px 2px rgba(black, 0.2);
     font-size: 15px;
-    color: #fff;
+    color: #000000;
     line-height: 2.533;
-    background-color: rgb(0, 0, 0);;
     padding: 10px 12px;
     text-decoration: none;
+    z-index: 10;
+
+
+    &:before{
+      position: absolute;
+      content: '';
+      width: 0%;
+      height: 100%;
+      background: #000000;
+      top: 0;
+      left: auto;
+      right: 0;
+      z-index: -1;
+      transition: all 300ms ease;
+    }
+
+    &:hover{
+      color: #ffffff;
+      box-shadow:none;
+      opacity: 1;
+      &:before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        top: 0; left: 0; right: 0;
+        z-index: -1;
+        color: #ffffff;
+      }
+    }
   }
 
-  .button-more {
-    position: relative;
-    font-size: 15px;
-    color: #000;
-    line-height: 2.533;
-    text-decoration: none;
-  }
 
   .me__image {
     position: absolute;
